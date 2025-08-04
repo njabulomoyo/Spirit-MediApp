@@ -1,0 +1,16 @@
+[
+    {
+        "name": "toilet paper",
+        "price": 3.5,
+        "quantity": 2,
+        "total_price": 7.0,
+        "tax": 0.7307999999999999
+    },
+    {
+        "name": "sugar",
+        "price": 2.0,
+        "quantity": 2,
+        "total_price": 4.0,
+        "tax": 0.41759999999999997
+    }
+]
