@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from smarttemplates.net/medikit/dashboard__patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+<meta name="author" content="SmartTemplates" />
+<meta name="description" content="medikit admin dashboard" />
+<meta name="keywords" content="medical dashboard, HTML UI KIT, medikit" />
+<title>My Profile</title>
+<link rel="stylesheet" href="css/daterangepicker.css">
+<link rel="stylesheet" href="css/select2.css">
+<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+<link rel="stylesheet" href="css/dashboard.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> 
+<link rel="stylesheet" href="css/spirit.styles.css">
+</head>
+<body>
+
+<div class="dashboard-wrap">
+
+	<header class="sidebar-header">
+		<h1 class="sidebar-header__logo"><span>Spi<strong>rit</strong></span></h1>
+	</header>
+	
+	<!-- Section sidebar -->
+	<div class="section section--sidebar" id="sidebar">	
+		<nav class="sidebar-menu"> 
+			<ul>
+				<li class="dashboard"><a href="spirit_dashboard.html"><b>Dashboard</b></a></li>
+				<li class="components has-submenu"><a href="spirit_prescriptions.html"><b>Prescriptions</b></a></li>				
+				<li class="doctors has-submenu"><a href="#"><b>Appointments<span class="submenu-arrow"></span></b></a>
+					<ul class="sidebar-menu__submenu">
+						<li><a href="spirit_upcoming_appointments.html">Upcoming & Previous</a></li>
+						<li><a href="spirit_previous_appointments.html">New</a></li>
+					</ul>
+				</li>
+				<li class="patients has-submenu"><a href="spirit_doctor's_office_billing.html"><b>Billing</b></a></li>
+				<li class="doctors has-submenu"><a href="#"><b>Account<span class="submenu-arrow"></span></b></a>
+					<ul class="sidebar-menu__submenu">
+						<li><a href="spirit_my_profile.html">My profile</a></li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+				</li>		
+			</ul>
+		</nav>
+
+</div>
+	
+	<!-- Section sidebar -->
+	<div class="section section--content" id="content">
+		<header class="content-header">
+		
+			<div class="sidebar-resize"></div>
+			<div class="mobile-menu"><div class="st-burger-icon st-burger-icon--medium"><span></span></div></div>
+			
+			<div class="content-header__user content-header__dropdown">  
+			    <div class="content-header__user-avatar content-header__dropdown-activate" data-dropdown="userdropdown">
+					<span class="content-header__user-name"><strong>Reed Thompson</strong></span>
+			    </div>  
+				<nav class="dropdown-menu dropdown-menu--header dropdown-menu--user-menu " id="userdropdown"> 	
+				<h3 class="dropdown-menu__subtitle">Menu</h3>
+				<ul>   
+				    <li><a href="spirit_my_profile.html">My profile</a></li>			    
+				    <li class="logout"><a href="#" class="button button--general button--red-border">Logout</a></li>
+				</ul>
+				</nav>
+			</div>
+		
+			<nav class="content-header__menu">       
+				<ul>
+					<li class="user selected"><a href="dashboard__patients-add.html">Add new patient</a></li>
+					<li class="prescription modal-toggle" data-openpopup="prescription"><a href="#">Write a prescription</a></li>
+					<li class="reports modal-toggle" data-openpopup="reports"><a href="#">Generate report</a></li>
+				</ul>
+			</nav>
+			
+		</header>
+		<div class="content-subheader">		
+			<div class="content-subheader__titles">
+					<h2 class="content-subheader__title">My Profile</h2>
+					<nav class="content-subheader__breadcrumb-menu">			
+							<ul>
+								<li><a href="dashboard.html">Account</a></li>
+							</ul>
+					</nav>
+			</div>		
+		</div>
+		
+		<div class="grid grid--margin">
+			
+			<div class="grid__row">
+				<div class="grid__col grid__col--padding bg-white">
+					<div class="patient-info__details"> 
+						<div class="patient-info__title">Reed Thompson </div>
+						<div class="patient-info__row">
+							<div class="patient-info__col"><span>Birth:</span> 14 January 1985 (40 y.o)</div>
+							<div class="patient-info__col"><span>Gender:</span> Male </div>
+							<div class="patient-info__col"><span>Address:</span> 403 Main St, Grambling, LA </div>
+						</div>
+						<div class="patient-info__row">
+							<div class="patient-info__col"><span>Email:</span> <a href="#">reedthompson@gmail.com</a></div>
+							<div class="patient-info__col"><span>Phone:</span> <a href="tel:123">+1 318 263 0466</a></div>
+							<div class="patient-info__col"><span>alternative email:</span> alternativeEmail@gmail.com</div>
+						</div>
+						<div class="patient-info__row">
+							<div class="patient-info__col"><span>Blood type:</span> AB+ </div>
+							<div class="patient-info__col"><span>Allergies:</span> Penicilin, honey, some peanuts</div>
+						</div>
+					</div>
+					<div class="edit-profile-btn-container">
+						<button class="edit-profile-btn">Edit your profile</button>
+					</div>
+					<!-- TABLE end -->
+				</div>
+
+			</div>
+			
+			<div class="grid__row">
+				<div class="grid__col grid__col--padding bg-white">
+				</div>
+			</div>
+
+		</div> <!-- End of Grid -->
+	</div>
+<!--Last edited to this part. This covers the sidebar and the heading.-->
+</div> <!-- Wrap end -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/daterangepicker.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/jquery.dashboard-custom.js"></script>
+</body>
+
+<!-- Mirrored from smarttemplates.net/medikit/dashboard__patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
+</html>

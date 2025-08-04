@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from smarttemplates.net/medikit/dashboard__patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+<meta name="author" content="SmartTemplates" />
+<meta name="description" content="medikit admin dashboard" />
+<meta name="keywords" content="medical dashboard, HTML UI KIT, medikit" />
+<title>Previous Appointments</title>
+<link rel="stylesheet" href="css/daterangepicker.css">
+<link rel="stylesheet" href="css/select2.css">
+<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+<link rel="stylesheet" href="css/dashboard.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> 
+<link rel="stylesheet" href="css/spirit.styles.css">
+</head>
+<body>
+
+<div class="dashboard-wrap">
+
+	<header class="sidebar-header">
+		<h1 class="sidebar-header__logo"><span>Spi<strong>rit</strong></span></h1>
+	</header>
+	
+	<!-- Section sidebar -->
+	<div class="section section--sidebar" id="sidebar">	
+		<nav class="sidebar-menu"> 
+			<ul>
+				<li class="dashboard"><a href="spirit_dashboard.html"><b>Dashboard</b></a></li>
+				<li class="components has-submenu"><a href="spirit_prescriptions.html"><b>Prescriptions</b></a></li>
+				
+				<li class="doctors has-submenu"><a href="#"><b>Appointments<span class="submenu-arrow"></span></b></a>
+					<ul class="sidebar-menu__submenu">
+						<li><a href="spirit_upcoming_appointments.html">Upcoming & Previous</a></li>
+						<li><a href="spirit_previous_appointments.html">New</a></li>
+					</ul>
+				</li>
+				<li class="patients has-submenu"><a href="spirit_doctor's_office_billing.html"><b>Billing</b></a></li>
+				<li class="doctors has-submenu"><a href="#"><b>Account<span class="submenu-arrow"></span></b></a>
+					<ul class="sidebar-menu__submenu">
+						<li><a href="spirit_my_profile.html">My profile</a></li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+				</li>		
+			</ul>
+		</nav>
+
+</div>
+	
+	<!-- Section sidebar -->
+	<div class="section section--content" id="content">
+		<header class="content-header">
+		
+			<div class="sidebar-resize"></div>
+			<div class="mobile-menu"><div class="st-burger-icon st-burger-icon--medium"><span></span></div></div>
+			
+			<div class="content-header__user content-header__dropdown">  
+			    <div class="content-header__user-avatar content-header__dropdown-activate" data-dropdown="userdropdown">
+					<span class="content-header__user-name"><b>Reed Thompson</b></span>
+			    </div>  
+				<nav class="dropdown-menu dropdown-menu--header dropdown-menu--user-menu " id="userdropdown"> 	
+				<h3 class="dropdown-menu__subtitle">Menu</h3>
+				<ul>   
+				    <li><a href="spirit_my_profile.html">My profile</a></li>			    
+				    <li class="logout"><a href="#" class="button button--general button--red-border">Logout</a></li>
+				</ul>
+				</nav>
+			</div>
+		
+			<nav class="content-header__menu">       
+				<ul>
+					<li class="user selected"><a href="dashboard__patients-add.html">Add new patient</a></li>
+					<li class="prescription modal-toggle" data-openpopup="prescription"><a href="#">Write a prescription</a></li>
+					<li class="reports modal-toggle" data-openpopup="reports"><a href="#">Generate report</a></li>
+				</ul>
+			</nav>
+			
+		</header>
+		<div class="content-subheader">		
+			<div class="content-subheader__titles">
+					<h1 class="content-subheader__title">New</h1>
+					<nav class="content-subheader__breadcrumb-menu">			
+							<ul>
+								<li><a href="dashboard.html">Appointments</a></li>
+							</ul>
+					</nav>
+			</div>		
+		</div>
+		
+		<div class="grid grid--margin">			
+			<div class="grid__row">
+				<div class="grid__col grid__col--padding bg-white">
+					<div class="book-appointments">
+						<div class="booking-container">
+							<h3 class="book-new-appointment-header"><strong>Book New Appointment</strong></h3>
+							
+							<label for="doctorDropdown">Select a Doctor:</label>
+							<select id="doctorDropdown">
+								<option value="">-- Select --</option>
+								<option value="Dr Umar Johnson">Dr Umar Johnson</option>
+								<option value="Dr Octavius">Dr Octavius</option>
+								<option value="Dr Strange">Dr Strange</option>
+							</select>
+					
+							<label for="dayDropdown">Select a Date:</label>
+							<input type="date" id="dayDropdown">
+					
+							<label for="timeDropdown">Select a Time:</label>
+							<select id="timeDropdown">
+								<option value="">-- Select --</option>
+								<option value="10:00am - 10:30am">10:00am - 10:30am</option>
+								<option value="11:00am - 11:30am">11:00am - 11:30am</option>
+								<option value="3:00pm - 3:30pm">3:00pm - 3:30pm</option>
+							</select>
+					
+							<button id="bookButton">Book Appointment</button>
+						</div>
+					
+					
+					<!-- TABLE end -->
+				</div>
+			</div>			
+			<div class="grid__row">
+				<div class="grid__col grid__col--padding bg-white">
+				</div>
+			</div>
+
+		</div> <!-- End of Grid -->
+	</div>
+<!--Last edited to this part. This covers the sidebar and the heading.-->
+</div> <!-- Wrap end -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/daterangepicker.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/jquery.dashboard-custom.js"></script>
+
+<script>
+// Function to populate date dropdown with the next 10 days
+function populateDateDropdown() {
+    const dateDropdown = document.getElementById("dayDropdown");
+    dateDropdown.innerHTML = ""; // Clear previous options
+
+    const today = new Date();
+    
+    for (let i = 0; i < 10; i++) {
+        let futureDate = new Date();
+        futureDate.setDate(today.getDate() + i);
+
+        let formattedDate = futureDate.toISOString().split("T")[0]; // YYYY-MM-DD format
+        let option = document.createElement("option");
+        option.value = formattedDate;
+        option.textContent = futureDate.toDateString(); // Display in human-readable format
+        dateDropdown.appendChild(option);
+    }
+}
+
+// Function to save appointment
+async function saveAppointment() {
+    const doctor = document.getElementById("doctorDropdown").value;
+    const date = document.getElementById("dayDropdown").value;
+    const time = document.getElementById("timeDropdown").value;
+
+    const doctorsData = {
+        "Dr Umar Johnson": { email: "umarjohnson@gmail.com", specialty: "Dermatology", location: "54 Medical Center, Room 34" },
+        "Dr Octavius": { email: "octavious@gmail.com", specialty: "General Check-up", location: "20 All State Center, Room 34" },
+        "Dr Strange": { email: "stephenstrange@gmail.com", specialty: "Optometry", location: "2nd floor Vision Center, Room 40" }
+    };
+
+    if (!doctor || !date || !time) {
+        alert("Please select all fields before booking.");
+        return;
+    }
+
+    const appointment = {
+        doctor: doctor,
+        email: doctorsData[doctor].email,
+        specialty: doctorsData[doctor].specialty,
+        location: doctorsData[doctor].location,
+        date: date,
+        time: time
+    };
+
+    // Get existing appointments
+    let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    appointments.push(appointment);
+    
+    // Save to Local Storage
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+
+    // Save to JSON file (requires backend support)
+    try {
+        await fetch("/saveAppointments", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(appointments)
+        });
+        alert("Appointment booked successfully!");
+    } catch (error) {
+        console.error("Error saving appointment:", error);
+    }
+}
+
+// Event listeners
+document.addEventListener("DOMContentLoaded", populateDateDropdown);
+document.getElementById("bookButton").addEventListener("click", saveAppointment);
+</script>
+</body>
+
+</html>

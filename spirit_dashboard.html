@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from smarttemplates.net/medikit/dashboard__patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+<meta name="author" content="SmartTemplates" />
+<meta name="description" content="medikit admin dashboard" />
+<meta name="keywords" content="medical dashboard, HTML UI KIT, medikit" />
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/daterangepicker.css">
+<link rel="stylesheet" href="css/select2.css">
+<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+<link rel="stylesheet" href="css/dashboard.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<link rel="stylesheet" href="css/spirit_dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-wrap">
+
+	<header class="sidebar-header">
+		<h1 class="sidebar-header__logo"><span>Spi<strong>rit</strong></span></h1>
+	</header>
+	
+	<!-- Section sidebar -->
+	<div class="section section--sidebar" id="sidebar">	
+			<nav class="sidebar-menu"> 
+				<ul>
+					<li class="dashboard"><a href="spirit_dashboard.html"><b>Dashboard</b></a></li>
+					<li class="components has-submenu"><a href="spirit_prescriptions.html"><b>Prescriptions</b></a></li>
+					
+					<li class="doctors has-submenu"><a href="#"><b>Appointments<span class="submenu-arrow"></span></b></a>
+						<ul class="sidebar-menu__submenu">
+							<li><a href="spirit_upcoming_appointments.html">Upcoming & previous</a></li>
+							<li><a href="spirit_previous_appointments.html">New</a></li>
+						</ul>
+					</li>
+					<li class="patients has-submenu"><a href="spirit_doctor's_office_billing.html"><b>Billing</b></a></li>
+                    <li class="doctors has-submenu"><a href="#"><b>Account<span class="submenu-arrow"></span></b></a>
+						<ul class="sidebar-menu__submenu">
+							<li><a href="spirit_my_profile.html">My profile</a></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>		
+				</ul>
+			</nav>
+	
+	</div>
+	
+	<!-- Section sidebar -->
+	<div class="section section--content" id="content">
+		<header class="content-header">
+		
+			<div class="sidebar-resize"></div>
+			<div class="mobile-menu"><div class="st-burger-icon st-burger-icon--medium"><span></span></div></div>
+			
+			<div class="content-header__user content-header__dropdown">  
+			    <div class="content-header__user-avatar content-header__dropdown-activate" data-dropdown="userdropdown">
+					<span class="content-header__user-name"><b>Reed Thompson</b></span>
+			    </div>  
+				<nav class="dropdown-menu dropdown-menu--header dropdown-menu--user-menu " id="userdropdown"> 	
+				<h3 class="dropdown-menu__subtitle">Menu</h3>
+				<ul>   
+				    <li><a href="spirit_my_profile.html">My profile</a></li>			    
+				    <li class="logout"><a href="#" class="button button--general button--red-border">Logout</a></li>
+				</ul>
+				</nav>
+			</div>
+		</header>
+        <div class="content-subheader">		
+			<div class="content-subheader__titles">
+					<h1 class="content-subheader__title">Dashboard</h1>
+			</div>		
+		</div>
+
+		
+	<!---begining of the main content section-->
+		<div class="grid grid--margin">
+            <div>
+                <p class="dashboard-subheading">Upcoming Appointments</p>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th class="date-column">Date</th>
+                        <th class="details-column">Details</th>
+                        <th class="doctor-column">Doctor</th>
+                    </tr>
+                    <tr>
+                        <td>03/02/2025</td>
+                        <td>Routine check-up and general consultation.</td>
+                        <td>Dr. Smith</td>
+                    </tr>
+                    <tr>
+                        <td>02/14/2025</td>
+                        <td>Follow-up appointment for blood test results.</td>
+                        <td>Dr. Umar Johnson</td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div>
+                <p class="dashboard-subheading">Pending Payments</p>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th class="date-column">Date</th>
+                        <th class="details-column">Details</th>
+                        <th class="doctor-column">Status</th>
+                    </tr>
+                    <tr>
+                        <td>09/25/2024</td>
+                        <td>Routine check-up and general consultation.</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>11/07/2024</td>
+                        <td>Follow-up appointment for blood test results.</td>
+                        <td>Pending</td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div>
+                <p class="dashboard-subheading">Current Prescription</p>
+            </div>
+            <div>
+                <table class="prescriptions-table">
+                    <tr>
+                        <th class="date-column">Date</th>
+                        <th class="details-column">Drug Name</th>
+                        <th class="doctor-column">Instructions</th>
+                    </tr>
+                    <tr>
+                        <td>02/14/2025</td>
+                        <td>5mm of Benzene Ethane</td>
+                        <td>Take twice daily</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-10</td>
+                        <td>10mm of Ezanoic</td>
+                        <td>Take three times daily</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- TABLE end -->
+		</div> <!-- End of Grid -->
+	</div>	
+</div> <!-- Wrap end -->
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/daterangepicker.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/jquery.dashboard-custom.js"></script>
+</body>
+
+<!-- Mirrored from smarttemplates.net/medikit/dashboard__patients.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Apr 2019 00:52:40 GMT -->
+</html>
